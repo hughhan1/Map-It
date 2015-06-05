@@ -23,17 +23,48 @@ $result = $instagram->getPopularMedia();
 <div class="container">
     <header class="clearfix">
         <img src="../assets/instagram.png" alt="Instagram logo">
-
         <h1>Instagram <span>search by location</span></h1>
     </header>
     <div class="main">
         <div class="search">
-            <form  method="post" action="search.php?go"  id="search_form"> 
-                <input type="text" class="search_box" placeholder="Search..."> 
+            <form method="post" action="search.php?go"  id="search_form"> 
+                <input type="text" class="search_box" name="submit" placeholder="Latitude + Longitude"> 
             </form> 
-            <?php 
-                if (isset($_POST['submit'])) { 
-                    // Call Instagram API and search.
+            <?php  
+                if (isset($_GET['go'])) { 
+                    $input = $_POST['submit'];
+                    $arr = preg_split('/[\s]+/', $input);
+
+                    $result = $instagram->searchMedia($arr[0], $arr[1]);
+                    foreach ($result->data as $media) {
+                        $content = '<li>';
+                        // output media
+                        if ($media->type === 'video') {
+                            // video
+                            $poster = $media->images->low_resolution->url;
+                            $source = $media->videos->standard_resolution->url;
+                            $content .= "<video class=\"media video-js vjs-default-skin\" width=\"250\" height=\"250\" poster=\"{$poster}\"
+                                   data-setup='{\"controls\":true, \"preload\": \"auto\"}'>
+                                     <source src=\"{$source}\" type=\"video/mp4\" />
+                                   </video>";
+                        } else {
+                            // image
+                            $image = $media->images->low_resolution->url;
+                            $content .= "<img class=\"media\" src=\"{$image}\"/>";
+                        }
+                        // create meta section
+                        $avatar = $media->user->profile_picture;
+                        $username = $media->user->username;
+                        $comment = (!empty($media->caption->text)) ? $media->caption->text : '';
+                        $content .= "<div class=\"content\">
+                                   <div class=\"avatar\" style=\"background-image: url({$avatar})\"></div>
+                                   <p>{$username}</p>
+                                   <div class=\"comment\">{$comment}</div>
+                                 </div>";
+                        // output media
+                        echo $content . '</li>';
+                    }
+
                 } 
             ?> 
         </div>
