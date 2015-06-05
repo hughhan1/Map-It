@@ -1,16 +1,26 @@
 /**
- * Instagram PHP API
- * basic styling for demo pages
+ * Map It!
  *
- * @link https://github.com/cosenary/Instagram-PHP-API
- * @author Christian Metz
- * @since 01.10.2013
+ * @link https://github.com/hughhan/Map-It
+ * @author Hugh Han
+ * @since 06.02.2015
  */
 
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 
 html {
   height: 100%;
+}
+
+form {
+  width:125px;
+  margin:0 auto;
+}
+
+input[type=text]{
+  color:#bcbcbc;
+  border:1px solid #d0d0d0;
+  background-color:#fcfcfc;
 }
 
 *,
@@ -154,6 +164,22 @@ a {
   margin-right: 8px;
   vertical-align: middle;
   width: 40px;
+}
+
+.search {
+  width:95%;
+  height:50px;
+  padding:40px 25px;
+  background: url('./images/lighter_grey.jpg');
+}
+
+.search_box { 
+  padding:6px 15px 6px 30px;
+  margin:3px; 
+  background: url('./images/search.png') no-repeat 8px 6px; 
+  border-radius:15px; 
+  -moz-border-radius:15px; 
+  -webkit-border-radius:15px; 
 }
 
 /* Video.js play button */
