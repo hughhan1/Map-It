@@ -1,7 +1,6 @@
 <?php
 
 require '../Instagram/src/Instagram.php';
-
 use MetzWeb\Instagram\Instagram;
 
 // initialize class
@@ -15,6 +14,7 @@ $instagram = new Instagram(array(
 $loginUrl = $instagram->getLoginUrl();
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +34,7 @@ $loginUrl = $instagram->getLoginUrl();
 <body>
 <div class="container">
     <header class="clearfix">
-        <h1>Instagram <span>display your photo stream</span></h1>
+        <h1>Map It <span>find photos anywhere</span></h1>
     </header>
     <div class="main">
         <ul class="grid">

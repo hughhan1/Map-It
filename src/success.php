@@ -8,7 +8,6 @@
  * @since 01.10.2013
  */
 require '../Instagram/src/Instagram.php';
-
 use MetzWeb\Instagram\Instagram;
 
 // initialize class
@@ -38,12 +37,13 @@ if (isset($code)) {
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram - photo stream</title>
+    <title>Map It - photo stream</title>
     <link href="https://vjs.zencdn.net/4.2/video-js.css" rel="stylesheet">
     <link href="../assets/css/style.css" rel="stylesheet">
     <script src="https://vjs.zencdn.net/4.2/video.js"></script>

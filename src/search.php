@@ -1,20 +1,19 @@
 <?php
 
 require '../Instagram/src/Instagram.php';
-
 use MetzWeb\Instagram\Instagram;
 
 $instagram = new Instagram('b6446a69f86a4e06bb807270b908c5a8');
-
 $result = $instagram->getPopularMedia();
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram - search by location</title>
+    <title>Map It - search by location</title>
     <link href="https://vjs.zencdn.net/4.2/video-js.css" rel="stylesheet">
     <link href="../assets/css/style.css" rel="stylesheet">
     <script src="https://vjs.zencdn.net/4.2/video.js"></script>
@@ -23,7 +22,7 @@ $result = $instagram->getPopularMedia();
 <div class="container">
     <header class="clearfix">
         <img src="../assets/img/instagram.png" alt="Instagram logo">
-        <h1>Instagram <span>search by location</span></h1>
+        <h1>Map It <span>search by location</span></h1>
     </header>
     <div class="main">
         <div class="search">
