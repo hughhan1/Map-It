@@ -45,13 +45,13 @@ if (isset($code)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram - photo stream</title>
     <link href="https://vjs.zencdn.net/4.2/video-js.css" rel="stylesheet">
-    <link href="../assets/style.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
     <script src="https://vjs.zencdn.net/4.2/video.js"></script>
 </head>
 <body>
 <div class="container">
     <header class="clearfix">
-        <img src="../assets/instagram.png" alt="Instagram logo">
+        <img src="../assets/img/instagram.png" alt="Instagram logo">
 
         <h1>Instagram photos <span>taken by <?php echo $data->user->username ?></span></h1>
     </header>
@@ -97,20 +97,6 @@ if (isset($code)) {
 </div>
 <!-- javascript -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-        // rollover effect
-        $('li').hover(
-            function () {
-                var $media = $(this).find('.media');
-                var height = $media.height();
-                $media.stop().animate({marginTop: -(height - 82)}, 1000);
-            }, function () {
-                var $media = $(this).find('.media');
-                $media.stop().animate({marginTop: '0px'}, 1000);
-            }
-        );
-    });
-</script>
+<script src="../assets/js/success.js"></script>
 </body>
 </html>

@@ -16,13 +16,13 @@ $result = $instagram->getPopularMedia();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram - search by location</title>
     <link href="https://vjs.zencdn.net/4.2/video-js.css" rel="stylesheet">
-    <link href="../assets/style.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
     <script src="https://vjs.zencdn.net/4.2/video.js"></script>
 </head>
 <body>
 <div class="container">
     <header class="clearfix">
-        <img src="../assets/instagram.png" alt="Instagram logo">
+        <img src="../assets/img/instagram.png" alt="Instagram logo">
         <h1>Instagram <span>search by location</span></h1>
     </header>
     <div class="main">
@@ -76,10 +76,6 @@ $result = $instagram->getPopularMedia();
 </div>
 <!-- javascript -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-        // Something Cool
-    });
-</script>
+<script src="../assets/js/search.js"></script>
 </body>
 </html>
