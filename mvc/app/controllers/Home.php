@@ -14,8 +14,8 @@ class Home extends Controller {
 		$this->view('home/index', ['loginUrl' => $instagram->getLoginUrl()]);
 	}
 
-	public function login() {
-		
+	public function login($loginUrl = NULL) {
+		$loginUrl ? header('Location: ' . $loginUrl);
 	}
 
 	public function search() {
