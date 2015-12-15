@@ -10,5 +10,8 @@ Map It! is being built using PHP and the Instagram API on the back end, and CSS 
 
 Map It! is still in development, but here are some examples of the user interface.
 
-<img src="assets/img/search.png" width="750px" height="420px">
-<img src="assets/img/popular.png" width="750px" height="310px">
+<img src="assets/img/search.png" width="750px" height="350px">
+<img src="assets/img/popular.png" width="750px" height="350px">
+
+### Update ###
+Instagram has released a feature to allow searching by location. Unfortunately, this project is no longer being worked on.
